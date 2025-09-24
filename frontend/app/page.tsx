@@ -2,10 +2,10 @@
 
 import React, { useState, useEffect } from 'react'
 import { Activity, Leaf, Wheat, Shield, TrendingUp } from 'lucide-react'
-import ImageUpload from '@/components/ImageUpload'
-import PredictionResults from '@/components/PredictionResults'
-import { PredictionResponse } from '@/types/api'
-import { apiService } from '@/lib/api'
+import ImageUpload from '../components/ImageUpload'
+import PredictionResults from '../components/PredictionResults'
+import { PredictionResponse } from '../types/api'
+import { apiService } from '../lib/api'
 import { Toaster } from 'react-hot-toast'
 
 export default function HomePage() {

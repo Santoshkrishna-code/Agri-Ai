@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: agri-ai-backend
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: cd backend && gunicorn --bind 0.0.0.0:$PORT --workers 2 --timeout 120 app:app
+    envVars:
+      - key: RF_API_KEY
+        value: 9pTsuiQyAxjAJU7XL1sh
+      - key: WORKSPACE_NAME
+        value: plant-ai-4q7oj
+      - key: RICE_WORKFLOW_ID
+        value: custom-workflow-5
+      - key: WHEAT_WORKFLOW_ID
+        value: custom-workflow-2
+      - key: MIN_CONFIDENCE
+        value: 0.4
+      - key: CONFIDENCE_MARGIN
+        value: 0.02
+      - key: HOST
+        value: 0.0.0.0
+      - key: DEBUG
+        value: false
+      - key: LOG_LEVEL
+        value: INFO

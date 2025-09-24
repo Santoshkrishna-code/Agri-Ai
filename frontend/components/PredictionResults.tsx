@@ -1,5 +1,5 @@
 import React from 'react'
-import { PredictionResponse, Detection } from '@/types/api'
+import { PredictionResponse, Detection } from '../types/api'
 import { CheckCircle, AlertCircle, Clock, Target } from 'lucide-react'
 
 interface PredictionResultsProps {

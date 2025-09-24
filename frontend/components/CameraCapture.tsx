@@ -2,8 +2,8 @@
 
 import React, { useRef, useState, useCallback, useEffect } from 'react'
 import { Camera, CameraOff, Circle, RotateCcw, Loader2 } from 'lucide-react'
-import { PredictionResponse } from '@/types/api'
-import { apiService } from '@/lib/api'
+import { PredictionResponse } from '../types/api'
+import { apiService } from '../lib/api'
 import toast from 'react-hot-toast'
 
 interface CameraCaptureProps {

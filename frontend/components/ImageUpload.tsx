@@ -3,8 +3,8 @@
 import React, { useState, useCallback } from 'react'
 import { useDropzone } from 'react-dropzone'
 import { Upload, Link2, X, Loader2, Camera } from 'lucide-react'
-import { PredictionResponse } from '@/types/api'
-import { apiService } from '@/lib/api'
+import { PredictionResponse } from '../types/api'
+import { apiService } from '../lib/api'
 import CameraCapture from './CameraCapture'
 import toast from 'react-hot-toast'
 
