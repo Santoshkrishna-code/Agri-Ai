@@ -4,8 +4,8 @@ setlocal enabledelayedexpansion
 echo 🚀 Starting Full Stack Agri-AI Deployment...
 
 REM Check if we're in the right directory
-if not exist "app.py" (
-    echo ❌ Error: app.py not found. Please run this script from the Agri-AI root directory.
+if not exist "backend\app.py" (
+    echo ❌ Error: backend\app.py not found. Please run this script from the Agri-AI root directory.
     exit /b 1
 )
 
@@ -27,6 +27,7 @@ echo 🔧 Setting up Backend...
 echo ================================
 
 REM Backend setup
+cd backend
 pip install -r requirements.txt
 if !errorlevel! neq 0 (
     echo ❌ Error: Failed to install backend dependencies.
@@ -40,6 +41,7 @@ if not exist ".env" (
     echo Press any key after editing .env file...
     pause
 )
+cd ..
 
 echo.
 echo 🔧 Setting up Frontend...
@@ -81,7 +83,7 @@ set /p choice="Choose deployment option (1-4): "
 
 if "%choice%"=="1" (
     echo 🚀 Starting both services...
-    start "Backend Server" cmd /c "python app.py --host 0.0.0.0 --port 5000"
+    start "Backend Server" cmd /c "cd backend && python app.py --host 0.0.0.0 --port 5000"
     timeout /t 3 /nobreak > nul
     start "Frontend Server" cmd /c "cd frontend && npm start"
     echo.
@@ -96,6 +98,7 @@ if "%choice%"=="1" (
     taskkill /f /im node.exe /t 2>nul
 ) else if "%choice%"=="2" (
     echo 🚀 Starting backend only...
+    cd backend
     python app.py --host 0.0.0.0 --port 5000
 ) else if "%choice%"=="3" (
     echo 🚀 Starting frontend only...

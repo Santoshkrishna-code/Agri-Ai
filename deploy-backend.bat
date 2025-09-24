@@ -4,10 +4,13 @@ setlocal enabledelayedexpansion
 echo 🚀 Starting Agri-AI Backend Deployment...
 
 REM Check if we're in the right directory
-if not exist "app.py" (
-    echo ❌ Error: app.py not found. Please run this script from the Agri-AI root directory.
+if not exist "backend\app.py" (
+    echo ❌ Error: backend\app.py not found. Please run this script from the Agri-AI root directory.
     exit /b 1
 )
+
+REM Change to backend directory
+cd backend
 
 REM Check Python installation
 python --version >nul 2>&1
@@ -83,4 +86,5 @@ if "%choice%"=="1" (
     echo ❌ Invalid choice. Run the script again to choose a deployment method.
 )
 
+cd ..
 pause

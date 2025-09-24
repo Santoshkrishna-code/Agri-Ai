@@ -3,10 +3,13 @@
 echo "🚀 Starting Agri-AI Backend Deployment..."
 
 # Check if we're in the right directory
-if [ ! -f "app.py" ]; then
-    echo "❌ Error: app.py not found. Please run this script from the Agri-AI root directory."
+if [ ! -f "backend/app.py" ]; then
+    echo "❌ Error: backend/app.py not found. Please run this script from the Agri-AI root directory."
     exit 1
 fi
+
+# Change to backend directory
+cd backend
 
 # Check Python installation
 if ! command -v python &> /dev/null; then
