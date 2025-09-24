@@ -58,11 +58,14 @@ Thumbs.db
 temp/
 tmp/
 
-# Frontend dependencies (if any)
+# Frontend dependencies and build files
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.next/
+out/
+build/
 
 # Environment files (keep .env.example but ignore .env)
 .env
