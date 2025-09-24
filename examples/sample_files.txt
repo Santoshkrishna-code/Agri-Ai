@@ -1,0 +1,5 @@
+# Sample image file paths (update with actual paths on your system)
+C:\path\to\your\rice_sample_1.jpg
+C:\path\to\your\rice_sample_2.png
+C:\path\to\your\wheat_sample_1.jpg
+C:\path\to\your\wheat_sample_2.png

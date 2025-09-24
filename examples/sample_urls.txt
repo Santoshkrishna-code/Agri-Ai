@@ -1,0 +1,13 @@
+# Rice Image URLs for testing
+https://share.google/images/20XG05HinlqxQ86o0
+https://share.google/images/6vNzB491ALVs3Dxlt
+https://share.google/images/6SR3meb1DmrXiMZpF
+https://share.google/images/TPD66vk5guVJXnTAQ
+
+# Wheat Image URLs for testing (add your wheat URLs here)
+# https://example.com/wheat_field_1.jpg
+# https://example.com/wheat_healthy_leaf.jpg
+
+# Additional sample URLs from image hosting services
+# https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b
+# https://images.unsplash.com/photo-1550989460-0adf9ea622e2
